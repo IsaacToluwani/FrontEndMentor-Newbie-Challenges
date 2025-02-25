@@ -1,5 +1,5 @@
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 /* 
 global styles
 faster development
@@ -8,16 +8,15 @@ reusable
 
 /* Variables */
 :root {
-  --clr-primary: #678e3e;
-  --clr-primary-light: #beed8c;
-  --clr-grey-1: #102a42;
-  --clr-grey-5: #617d98;
-  --clr-grey-10: #f1f5f8;
-  --clr-white: #fff;
-  --ff-primary: "Catamaran", sans-serif;
-  --ff-secondary: "Grand Hotel", cursive;
-  --transition: all 0.3s linear;
-  --spacing: 0.25rem;
+  --clr-primary: #f4d04e;
+  --clr-grey-1: #111111;
+  --clr-grey-5: #6b6b6b;
+  --clr-white: #ffffff;
+  --ff-primary: 'Figtree', sans-serif;
+  --spacing-200: 24px;
+  --spacing-150: 12px;
+  --spacing-100: 8px;
+  --spacing-50:4px;
   --radius: 0.5rem;
 }
 
@@ -29,39 +28,46 @@ reusable
 }
 
 body {
+  height: 100vh;
+  background: var(--clr-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: var(--ff-primary);
-  background: var(--clr-white);
-  color: var(--clr-grey-1);
-  line-height: 1.5;
-  font-size: 0.875rem;
 }
 
-a {
-  text-decoration: none;
-}
 .container {
-  width: 50%;
+  width: 384px;
+  height: 500px;
+  border: solid;
   margin: 0 auto;
+  background: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  overflow: none;
+  padding: var(--spacing-200);
 }
 
 img {
-  width: 100%;
   display: block;
+  width: 100%;
+  height: 400px;
 }
 h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 24px;
+  font-weight: 800;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 16px;
+  font-weight:800 ;
+  background: var(--clr-primary);
+  align-self: flex-start;
 }
 h3 {
   font-size: 1.5rem;
@@ -70,32 +76,19 @@ h4 {
   font-size: 0.875rem;
 }
 p {
+  font-size: 14px;
+  font-weight: 500;
   margin-bottom: 1.25rem;
 }
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
-}
 /* more global css */
+
+section {
+  height: 43%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
+
 
 /*  ======
 Header
@@ -103,8 +96,7 @@ Header
 .header {
   min-height: 100vh;
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/main-bcg.jpeg") center/cover no-repeat;
+    url('../images/main-bcg.jpeg') center/cover no-repeat;
 }
-
 
 /* End of Header */
